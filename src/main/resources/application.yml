@@ -1,11 +1,13 @@
 spring:
+  jwt:
+    secret: 123ksdmlasjdfilajlkekk123kl4
   security:
     oauth2:
       client:
         registration:
           client-name: naver
-          client-id: KwvBYGOV3VdTUtwOTlaR
-          client-secret: S295I806q4
+          client-id:
+          client-secret:
           redirect-uri: http://localhost:8080/login/oauth2/code/naver
           authorization-grant-type: authorization_code
           scope: name,email
@@ -18,11 +20,10 @@ spring:
             user-name-attribute: response
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://???:3306/???????useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
-    username: ???
-    password: ????
+    url: jdbc:mysql://localhost:3306/oauth?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    username: myuser
+    password: myuser
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
 
-#  spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
